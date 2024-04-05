@@ -1,0 +1,61 @@
+@use '../variables';
+@use '../mixins' as mix;
+
+.header {
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    &-logo {
+        display: flex;
+
+    }
+
+    &-button {
+        width: 160px;
+        height: 26px;
+        color: var(--color-white);
+        background-color: var(--color-main);
+        font-weight: 500;
+        border-radius: 5px;
+
+        @include mix.hover {
+            background-color: var(--color-secondary);
+            cursor: pointer;
+        }
+    }
+}
+
+.navbar {
+    
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @include mix.tablet {
+            gap: 20px;
+        }
+
+        @include mix.mobile {
+            font-size: 20px;
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            height: 50px;
+            padding: 0 20px;
+
+            color: var(--color-secondary);
+
+            &:hover {
+                color: red;
+            }
+        }
+
+    }
+    
+}
+
