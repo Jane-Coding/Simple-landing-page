@@ -1,14 +1,18 @@
-@use '../variables';
-@use '../mixins' as mix;
+@use '../utils' as *;
 
 .header {
-    display: flex;    
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    height: var(--header-height);
     
     &-logo {
-        display: flex;
+        display: inline-flex;
+        margin: auto;
+
+        @include mobile-above {
+            margin: 0;
+        }
 
     }
 
@@ -20,7 +24,7 @@
         font-weight: 500;
         border-radius: 5px;
 
-        @include mix.hover {
+        @include hover {
             background-color: var(--color-secondary);
             cursor: pointer;
         }
@@ -28,34 +32,55 @@
 }
 
 .navbar {
-    
+
     &__menu {
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 40px;
 
-        @include mix.tablet {
+        @include tablet {
             gap: 20px;
         }
 
-        @include mix.mobile {
+        @include mobile {
             font-size: 20px;
         }
 
-        &-link {
-            display: inline-flex;
-            align-items: center;
-            height: 50px;
-            padding: 0 20px;
+        &-item{
+            // position: relative;
+        }
 
+        &-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: var(--header-height);
             color: var(--color-secondary);
 
             &:hover {
-                color: red;
+                color: var(--color-grey);
+
+                &:after {
+                    width: 100%;
+                    left: 0;
+                    transition-property: width, left;
+                    transition-duration: 0.3s;
+                }
+            } 
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: var(--color-grey);
+                
+
             }
         }
-
-    }
-    
+    }    
 }
 

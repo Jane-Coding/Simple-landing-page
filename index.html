@@ -5,25 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple landing page</title>
     <script type="module" src="./main.js" defer></script>
+    <script type="module" src="./burger-menu.js" defer></script>
   </head>
   <body class="page">
     <header class="header">
-      <dialog>
-        <nav class="navbar">
-          <ul class="navbar__menu">
-            <li class="navbar__menu-item">
-              <a href="" class="navbar__menu-link">Home</a>
+      <dialog id="openNavigation" class="mobile-menu">
+        <form method="dialog" class="">
+          <button class="mobile-menu__close-button" onClick="openNavigation.showModal()"
+          id="burgerButton">
+            <span class="visibility-off">Open navigation menu</span>
+          </button>       
+        </form>
+        <nav class="mobile-menu__navbar">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Home</a>
             </li>
-            <li class="navbar__menu-item">
-              <a href="" class="navbar__menu-link">About</a>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">About</a>
             </li>
-            <li class="navbar__menu-item">
-              <a href="" class="navbar__menu-link">Contact</a>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Contact</a>
             </li>
           </ul>
-        </nav>
-        
+        </nav>      
       </dialog>
+
+      <nav class="navbar hidden-mobile">
+        <ul class="navbar__menu">
+          <li class="navbar__menu-item">
+            <a href="" class="navbar__menu-link">Home</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="" class="navbar__menu-link">About</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="" class="navbar__menu-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger-button hidden-tablet" onClick="openNavigation.showModal()">
+        <span class="visibility-off">Open navigation menu</span>
+      </button>
       <a href="#" class="header-logo">
         <img
           src="./img/logo.png"
@@ -32,7 +55,7 @@
           class="header-logo-image"
         />
       </a>
-      <button class="header-button">Buy Now</button>
+      <button class="header-button hidden-mobile">Buy Now</button>
     </header>
   </body>
 </html>

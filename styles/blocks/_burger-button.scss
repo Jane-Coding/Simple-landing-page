@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+.burger-button {
+    @include square(var(--header-height));
+    @include hover {
+        background-color: var(--color-secondary);
+    }
+    
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 0;
+    background-color: transparent;
+
+    &:before {
+        content: '';
+        display: inline-flex;
+        align-items: center;
+        border-radius: inherit;
+        position: relative;
+        top: -4px;
+        width: 80%;
+        height: 4px;
+        background-color: var(--color-main);
+        box-shadow: 0 12px var(--color-main), 0 -12px var(--color-main);
+    }    
+}
