@@ -11,10 +11,13 @@
     <header class="header">
       <dialog id="openNavigation" class="mobile-menu">
         <form method="dialog" class="">
-          <button class="mobile-menu__close-button" onClick="openNavigation.showModal()"
-          id="burgerButton">
+          <button
+            class="mobile-menu__close-button"
+            onClick="openNavigation.showModal()"
+            id="burgerButton"
+          >
             <span class="visibility-off">Open navigation menu</span>
-          </button>       
+          </button>
         </form>
         <nav class="mobile-menu__navbar">
           <ul class="mobile-menu__list">
@@ -28,7 +31,7 @@
               <a href="" class="mobile-menu__link">Contact</a>
             </li>
           </ul>
-        </nav>      
+        </nav>
       </dialog>
 
       <nav class="navbar hidden-mobile">
@@ -44,7 +47,10 @@
           </li>
         </ul>
       </nav>
-      <button class="burger-button hidden-tablet" onClick="openNavigation.showModal()">
+      <button
+        class="burger-button hidden-tablet"
+        onClick="openNavigation.showModal()"
+      >
         <span class="visibility-off">Open navigation menu</span>
       </button>
       <a href="#" class="header-logo">
@@ -55,7 +61,27 @@
           class="header-logo-image"
         />
       </a>
-      <button class="header-button hidden-mobile">Buy Now</button>
+      <button class="button hidden-mobile">Buy Now</button>
     </header>
+
+    <main class="content">
+      <section class="section introduction">
+        <div class="introduction__body">
+          <h1 class="introduction__body-header">Introduce Your Product Quickly & Effectively</h1>
+          <p class="introduction__body-text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim.
+          </p>
+          <div class="introduction__button-wrapper">
+            <button class="button">Purchase UI Kit</button>
+            <button class="button button--outlined">Learn More</button>
+          </div>
+        </div>
+        <img src="./img/introduction.png" alt="" class="introduction__image hidden-mobile">
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,53 @@
+@use '../utils' as *;
+@use 'sass:math';
+
+.introduction {
+    padding-top: $height + 30px;
+    background-color: var(--color-background-dark);
+  
+    display: flex;
+    flex-direction: column;
+    
+    @include mobile-above {
+        flex-direction: row;
+    }
+
+    &__body {
+        align-self: center;
+
+        @include tablet-above {
+            width: 40%;
+        }
+
+        &-header {
+            color: var(--color-main);
+            font-size: 30px;
+            font-weight: 600;
+        }
+    
+        &-text {
+            color: var(--color-secondary);
+            font-size: 18px;
+            margin-top: 30px;    
+        }      
+    }
+
+    &__image {
+
+        @include mobile-above {
+            width: 45%;
+        }
+
+        @include tablet-above {
+            width: 40%;
+        }
+    }
+
+    &__button-wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
