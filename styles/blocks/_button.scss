@@ -1,0 +1,28 @@
+@use '../utils' as *;
+
+.button {
+    width: 160px;
+    height: 26px;
+    color: var(--color-white);
+    background-color: var(--color-main);
+    font-weight: 500;
+    border-radius: 3px;
+
+    @include hover {
+        background-color: var(--color-secondary);
+        cursor: pointer;
+    }
+
+    &--outlined {
+        color: var(--color-main);
+        background-color: transparent;
+        border: 2px solid var(--color-main);
+
+        @include hover {
+            color: var(--color-white);
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            cursor: pointer;
+        }
+    }
+}
