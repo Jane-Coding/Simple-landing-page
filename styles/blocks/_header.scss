@@ -12,7 +12,7 @@
         display: inline-flex;
         margin: auto;
 
-        @include mobile-above {
+        @include tablet {
             margin: 0;
         }
     }
@@ -26,16 +26,12 @@
         align-items: center;
         gap: 40px;
 
-        @include tablet {
+        @include laptop-below {
             gap: 20px;
         }
 
-        @include mobile {
+        @include tablet-below {
             font-size: 20px;
-        }
-
-        &-item{
-            // position: relative;
         }
 
         &-link {
