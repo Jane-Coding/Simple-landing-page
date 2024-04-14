@@ -1,0 +1,86 @@
+@use '../utils' as *;
+
+.description {
+
+    @include desktop-above {
+        gap: 70px;
+    }
+    
+    &__body {
+        align-content: center;
+
+        @include desktop-above {
+            width: 45%;
+        }
+    }
+
+    &__header {
+        color: var(--color-main);
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__text {
+        color: var(--color-text);
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 30px;
+
+        @include tablet-above {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+    
+        height: 100%;
+        margin: auto 0;
+    
+        @include tablet-above {
+            width: 45%;
+        }
+
+        @include desktop-above {
+            width: 35%;
+        }
+    
+  
+    }
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    line-height: 20px;
+}
+
+.card {
+
+    &__header {
+        color: var(--color-main);
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 15px; 
+
+        @include tablet-above {
+            font-size: 18px;
+        }
+    }
+
+    &__text  {
+        color: var(--color-grey);
+        font-size: 12px;
+        margin-top: 15px;
+
+        @include tablet-above {
+            font-size: 15px;
+        }
+    }
+
+    &__svg {        
+        width: 36px;
+        height: 36px;
+        fill: var(--color-main);
+    }
+}
