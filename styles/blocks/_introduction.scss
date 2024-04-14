@@ -5,31 +5,26 @@
     padding-top: $height + 30px;
     background-image: url('../../img/path.png');
     background-size: 85% 100%;
-    background-position: right;
+    background-position: right bottom;
     background-repeat: no-repeat;
   
     display: flex;
     flex-direction: column;
-    
-    @include tablet {
-        flex-direction: row;
-    }
 
-    @include laptop {
+    @include mobile-above {
+        background-size: 70% 100%;
+    }
+    
+    @include tablet-above {
+        flex-direction: row;
         background-size: 65% 120%;
     }
 
     &__body {
-        align-self: center;
-        padding-left: 10px;
-        padding-right: 10px;
+        align-content: center;
 
-        @include tablet {
-            padding: 20px;
-        }
-
-        @include laptop {
-            width: 40%;
+        @include desktop-above {
+            width: 50%;
         }
 
         &-header {
@@ -41,7 +36,11 @@
         &-text {
             color: var(--color-secondary);
             font-size: 18px;
-            margin-top: 30px;    
+            margin-top: 30px;
+            
+            @include laptop-above {
+                font-size: 20px;
+            }
         }      
     }
 
@@ -49,7 +48,7 @@
         height: 100%;
         align-self: center;
 
-        @include tablet {
+        @include tablet-above {
             width: 45%;
         }
 
@@ -59,10 +58,18 @@
     }
 
     &__button-wrapper {
-        margin-top: 30px;
+        margin: 30px auto 15px auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
+
+        @include mobile-above {
+            margin-top: 50px;
+        }
+
+        @include tablet-above {
+            gap: 50px;
+        }
     }
 }

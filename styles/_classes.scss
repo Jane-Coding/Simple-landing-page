@@ -17,14 +17,13 @@
 }
 
 .hidden-mobile {
-    @include tablet-below {
+    @include tablet {
         display: none !important;
-
     }
 }
 
 .hidden-tablet {
-    @include tablet {
+    @include tablet-above {
         display: none !important;
     }
 }

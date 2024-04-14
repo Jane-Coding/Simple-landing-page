@@ -1,32 +1,46 @@
-$mobile: 520px;
-$tablet: 768px;
-$tablet-below: 767px;
-$laptop: 1024px;
-$laptop-below: 1023px;
+$mobile-above: 550px;
+$tablet: 767px;
+$tablet-above: 768px;
+$laptop: 1023px;
+$laptop-above: 1024px;
+$desktop-above: 1200px;
 
-@mixin tablet-below{
-    @media(max-width: $tablet-below){
+
+@mixin mobile-above {
+    @media(min-width: $mobile-above){
         @content
     }
 };
 
 @mixin tablet{
-    @media(min-width: $tablet){
+    @media(max-width: $tablet){
+        @content
+    }
+};
+
+@mixin tablet-above{
+    @media(min-width: $tablet-above){
         @content
     }
 };
 
 @mixin laptop{
-    @media(min-width: $laptop){
+    @media(max-width: $laptop){
         @content
     }
 };
 
-@mixin laptop-below{
-    @media(max-width: $laptop-below){
+@mixin laptop-above{
+    @media(min-width: $laptop-above){
         @content
     }
 };
+
+@mixin desktop-above {
+    @media(min-width: $desktop-above){
+        @content
+    }
+}
 
 
 @mixin hover{
