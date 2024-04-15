@@ -16,6 +16,7 @@
 
     &__image {
         align-self: center;
+        max-width: 100%;
 
         @include mobile-above {
             max-width: 70%;
