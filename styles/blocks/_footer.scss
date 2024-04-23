@@ -52,3 +52,42 @@
         
 }
 
+.facebook {
+    @include hover {
+        .icon--color{
+            fill: #1877F2;
+        }
+    }
+}
+
+.linkedin {
+    @include hover {
+        .icon--color{
+            fill: #0E76A8;
+        }
+    }
+}
+
+.twitter {
+    @include hover {
+        .icon--color{
+            fill: #4FA8FF;
+        }
+    }
+}
+
+.youtube {
+    @include hover {
+        .icon--color{
+            fill: #FF0000;
+        }
+    }
+}
+
+.instagram {
+    @include hover {
+        .icon--color{
+            fill: #ee2a7b;
+        }
+    }
+}
