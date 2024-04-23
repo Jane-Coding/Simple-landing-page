@@ -7,6 +7,7 @@
     align-items: center;
     height: var(--header-height);
     width: 100%;
+    z-index: 1;
     
     &-logo {
         display: inline-flex;
