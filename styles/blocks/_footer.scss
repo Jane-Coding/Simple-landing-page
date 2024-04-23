@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+.footer {    
+    background-color: var(--color-background-dark);      
+    padding: 30px 50px 15px 50px;
+    text-align: center;
+
+    &-top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include mobile-above {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        &__icons {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: space-around;
+            width: 200px;
+        
+            .icon--size {
+                @include square (20px);
+            }
+        
+            .icon--color {
+                fill: var(--color-secondary);
+            }
+        
+        }
+    }
+
+
+    &-bottom {
+        
+        &__hr {
+            width: 100%;
+            background-color: var(--color-main);
+        }
+        
+        &__text {
+            padding-top: 10px;
+        }
+    }
+
+        
+}
+
