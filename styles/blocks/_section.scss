@@ -20,5 +20,10 @@
     @include laptop-above {
         justify-content: center;
     }
+
+    @include desktop-above {
+        padding-left: 175px;
+        padding-right: 175px;
+    }
 }
 
