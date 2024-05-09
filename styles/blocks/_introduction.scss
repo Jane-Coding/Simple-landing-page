@@ -11,20 +11,43 @@
     display: flex;
     flex-direction: column;
 
+    position: relative;
+    overflow: hidden;
+    min-height: 30vh;
+
     @include mobile-above {
         background-size: 70% 100%;
+        min-height: 40vh;
     }
     
-    @include tablet-above {
-        flex-direction: row;
+    @include tablet-above {        
         background-size: 65% 120%;
+        min-height: 50vh;
+    }
+
+    @include laptop-above {
+        min-height: 60vh;
+    }
+
+    @include desktop-above {
+        min-height: 70vh;
+        flex-direction: row;
     }
 
     &__body {
         align-content: center;
 
-        @include desktop-above {
-            width: 50%;
+        @include tablet-above {
+            margin-right: 35%;
+        }
+
+        @include laptop-above {
+            width: 539px;
+        }
+
+        @include xl-desktop {
+            width: 560px;
+            margin-right: 0;
         }
 
         &-header {
@@ -45,15 +68,26 @@
     }
 
     &__image {
-        height: 100%;
-        align-self: center;
+        position: absolute;
+        right: 0;
+        height: 80%;
+        width: auto;
+        transform: translateX(50%);
 
-        @include tablet-above {
-            width: 45%;
+        @include laptop-above {
+            transform: translateX(40%);
         }
-
-        @include laptop {
-            width: 40%;
+        
+        @include desktop-above {
+            transform: translateX(35%);
+        }
+        
+        @include xl-desktop{
+            position: relative;
+            transform: translateX(10%);
+            height: auto;
+            width: 60%;
+            align-self: center;
         }
     }
 
