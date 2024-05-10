@@ -52,18 +52,13 @@
 
         &-header {
             color: var(--color-main);
-            font-size: 30px;
-            font-weight: 600;
         }
     
         &-text {
             color: var(--color-secondary);
-            font-size: 18px;
             margin-top: 30px;
-            
-            @include laptop-above {
-                font-size: 20px;
-            }
+            font-size: 18px;
+            line-height: 1.8;
         }      
     }
 

@@ -48,18 +48,10 @@
 
     &__header {
         color: var(--color-main);
-        font-size: 24px;
-        font-weight: 500;
     }
 
     &__text {
         color: var(--color-text);
-        font-size: 16px;
-        line-height: 26px;
         margin-top: 30px;
-
-        @include tablet-above {
-            font-size: 18px;
-        }
     }
 }
