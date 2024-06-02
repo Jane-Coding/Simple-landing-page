@@ -2,5 +2,6 @@
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 export default {
-  plugins: [VitePluginBrowserSync()]
+  plugins: [VitePluginBrowserSync()],
+  base: '/Simple-landing-page'
 }
