@@ -71,5 +71,5 @@ $xl-desktop: 1500px;
 }
 
 @mixin fluid-text ($min, $max) {
-    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw ,#{$max}px);
+    font-size: clamp(#{$min}px, #{calc($max / 1440) * 100}vw ,#{$max}px);
 }
